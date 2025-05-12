@@ -1,0 +1,145 @@
+[gd_scene load_steps=14 format=3 uid="uid://bjofk1u5b41it"]
+
+[ext_resource type="Texture2D" uid="uid://dow3iqm8ojehw" path="res://sprites/minigames/write_faster/monitor.png" id="1_5kxgl"]
+[ext_resource type="Script" uid="uid://h0b12byvdh4l" path="res://scripts/minigames/write_faster/write_faster.gd" id="1_21do2"]
+[ext_resource type="FontFile" uid="uid://gv3nscgxooho" path="res://fonts/dogicapixel.ttf" id="2_ay0fw"]
+[ext_resource type="Script" uid="uid://bi2wxbo22ncj6" path="res://scripts/minigames/write_faster/wf_instructions.gd" id="5_x03lk"]
+[ext_resource type="AudioStream" uid="uid://4o5w7iey5wr8" path="res://sfx/minigames/write_faster/office_ambiance.mp3" id="6_wocl1"]
+[ext_resource type="Texture2D" uid="uid://e7hffuxwd38l" path="res://sprites/minigames/write_faster/instructions.png" id="7_3uvpk"]
+[ext_resource type="AudioStream" uid="uid://dfgjm3mrb3yci" path="res://sfx/minigames/write_faster/typing_sfx.mp3" id="7_fhfvl"]
+[ext_resource type="Texture2D" uid="uid://dxp4avd5kot2l" path="res://sprites/minigames/write_faster/time_bar.png" id="8_4wwjc"]
+[ext_resource type="Texture2D" uid="uid://ea5k8taf24yu" path="res://sprites/minigames/write_faster/time_progress.png" id="9_y2qnw"]
+[ext_resource type="Texture2D" uid="uid://buvinrwydor3f" path="res://sprites/buttons/write.png" id="10_y2qnw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bsg42"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iuwcg"]
+texture = ExtResource("10_y2qnw")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8evo1"]
+texture = ExtResource("10_y2qnw")
+modulate_color = Color(0.215686, 0.215686, 0.215686, 0.737255)
+
+[node name="write_faster" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_21do2")
+
+[node name="monitor" type="Sprite2D" parent="."]
+position = Vector2(369, 242)
+scale = Vector2(11.12, 7.4)
+texture = ExtResource("1_5kxgl")
+
+[node name="LineEdit" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 85.0
+offset_top = 361.0
+offset_right = 153.563
+offset_bottom = 392.0
+scale = Vector2(8.18298, 1.91288)
+theme_override_fonts/font = ExtResource("2_ay0fw")
+theme_override_font_sizes/font_size = 8
+keep_editing_on_text_submit = true
+caret_blink = true
+
+[node name="words" type="Label" parent="."]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 141.0
+offset_right = 128.0
+offset_bottom = 164.0
+theme_override_fonts/font = ExtResource("2_ay0fw")
+
+[node name="comments" type="Label" parent="."]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 272.0
+offset_right = 128.0
+offset_bottom = 295.0
+theme_override_fonts/font = ExtResource("2_ay0fw")
+
+[node name="instructions" type="ColorRect" parent="."]
+z_index = 10
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(18.2161, 12.092)
+color = Color(0, 0, 0, 1)
+script = ExtResource("5_x03lk")
+
+[node name="Label" type="Label" parent="instructions"]
+layout_mode = 0
+offset_left = 7.57572
+offset_top = 4.38306
+offset_right = 161.576
+offset_bottom = 27.3831
+scale = Vector2(0.145808, 0.414488)
+theme_override_fonts/font = ExtResource("2_ay0fw")
+theme_override_font_sizes/font_size = 16
+text = "Instructions"
+
+[node name="counter" type="Label" parent="instructions"]
+layout_mode = 0
+offset_left = 16.963
+offset_top = 28.614
+offset_right = 56.963
+offset_bottom = 51.614
+scale = Vector2(0.121699, 0.343815)
+theme_override_fonts/font = ExtResource("2_ay0fw")
+text = "3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="OfficeAmbiance" type="AudioStreamPlayer" parent="instructions"]
+stream = ExtResource("6_wocl1")
+parameters/looping = true
+
+[node name="instructions" type="Sprite2D" parent="instructions"]
+position = Vector2(19.3785, 20.4267)
+scale = Vector2(0.242428, 0.292094)
+texture = ExtResource("7_3uvpk")
+
+[node name="TypingSfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_fhfvl")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -1
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(18.3767, 12.1279)
+color = Color(0, 0, 0, 1)
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+layout_mode = 0
+offset_left = 274.0
+offset_top = 41.0
+offset_right = 314.0
+offset_bottom = 81.0
+scale = Vector2(10, 7.16)
+value = 50.0
+texture_over = ExtResource("8_4wwjc")
+texture_progress = ExtResource("9_y2qnw")
+
+[node name="write" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 568.0
+offset_top = 197.0
+offset_right = 648.0
+offset_bottom = 277.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_bsg42")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_iuwcg")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_iuwcg")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_iuwcg")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_iuwcg")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_iuwcg")
+theme_override_styles/hover = SubResource("StyleBoxTexture_iuwcg")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_iuwcg")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_8evo1")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_iuwcg")
+theme_override_styles/normal = SubResource("StyleBoxTexture_iuwcg")

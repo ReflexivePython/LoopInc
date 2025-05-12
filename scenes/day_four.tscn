@@ -1,0 +1,272 @@
+[gd_scene load_steps=27 format=3 uid="uid://khtu8ygpo1gx"]
+
+[ext_resource type="PackedScene" uid="uid://bdqudnwhxd6j8" path="res://scenes/office.tscn" id="1_jpomi"]
+[ext_resource type="Script" uid="uid://c7xfmm0kdohao" path="res://scripts/technical_scripts/day_four.gd" id="1_lscqx"]
+[ext_resource type="Texture2D" uid="uid://db77758rpg7bc" path="res://sprites/mc/new_walk/mc_walk_0001.png" id="3_1o58x"]
+[ext_resource type="Texture2D" uid="uid://bol6xj763lxef" path="res://sprites/mc/idle/mc_idle_0001.png" id="3_5jn7p"]
+[ext_resource type="Texture2D" uid="uid://bunp3u50qbbvk" path="res://sprites/mc/idle/mc_idle_0002.png" id="4_4eu5g"]
+[ext_resource type="Texture2D" uid="uid://b7dv1krxb31fn" path="res://sprites/mc/new_walk/mc_walk_0002.png" id="4_dgkqk"]
+[ext_resource type="Texture2D" uid="uid://cwxqbhqgtwib" path="res://sprites/mc/idle/mc_idle_0003.png" id="5_dk4tm"]
+[ext_resource type="Texture2D" uid="uid://b4ulxemfsn0s" path="res://sprites/mc/new_walk/mc_walk_0003.png" id="5_jrqql"]
+[ext_resource type="Texture2D" uid="uid://deah88sty4syd" path="res://sprites/mc/idle/mc_idle_0004.png" id="6_mxugu"]
+[ext_resource type="Texture2D" uid="uid://br8ytjdu5iawm" path="res://sprites/mc/new_walk/mc_walk_0004.png" id="6_yo04u"]
+[ext_resource type="Texture2D" uid="uid://7wyuxvnjh5r4" path="res://sprites/mc/new_walk/mc_walk_0005.png" id="7_bddb1"]
+[ext_resource type="Texture2D" uid="uid://dhynef6yrfwyl" path="res://sprites/mc/idle/mc_idle_0005.png" id="7_xq0ln"]
+[ext_resource type="Texture2D" uid="uid://1qkncwdd4q75" path="res://sprites/mc/new_walk/mc_walk_0006.png" id="8_5ekwe"]
+[ext_resource type="Texture2D" uid="uid://c38ub7ddjf3cy" path="res://sprites/mc/idle/mc_idle_0006.png" id="8_ykan1"]
+[ext_resource type="FontFile" uid="uid://gv3nscgxooho" path="res://fonts/dogicapixel.ttf" id="9_wcalp"]
+[ext_resource type="Script" uid="uid://d4cspwr2o6l4h" path="res://scripts/intro/skip.gd" id="10_omxj0"]
+[ext_resource type="Texture2D" uid="uid://d37tcte38my4w" path="res://sprites/day_four/keys.png" id="11_1o58x"]
+[ext_resource type="Texture2D" uid="uid://4261sewqm1qh" path="res://sprites/day_four/another_pc.png" id="11_omxj0"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dgkqk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_5jn7p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_4eu5g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_dk4tm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_mxugu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xq0ln")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ykan1")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_1o58x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_dgkqk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_jrqql")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_yo04u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_bddb1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_5ekwe")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 6.0
+}]
+
+[sub_resource type="Animation" id="Animation_lscqx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("mc:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(15, -559)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("mc:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("mc/fade:color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_omxj0"]
+resource_name = "fade_in"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("mc/fade:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333, 1.96667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0.262745)]
+}
+
+[sub_resource type="Animation" id="Animation_wcalp"]
+resource_name = "fade_out"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("mc/fade:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.96667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0.262745), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_oqfdi"]
+resource_name = "walk"
+length = 8.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("mc:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3.53333, 6.03333, 7.53333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(15, -559), Vector2(15, -255), Vector2(310, -255), Vector2(310, -335)]
+}
+
+[sub_resource type="Animation" id="Animation_d8pyf"]
+resource_name = "walk(slow)"
+length = 15.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("mc:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4.1, 9.03333, 15),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(310, -335), Vector2(310, -255), Vector2(15, -255), Vector2(15, -559)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("mc:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0333333),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lscqx"]
+_data = {
+&"RESET": SubResource("Animation_lscqx"),
+&"fade_in": SubResource("Animation_omxj0"),
+&"fade_out": SubResource("Animation_wcalp"),
+&"walk": SubResource("Animation_oqfdi"),
+&"walk(slow)": SubResource("Animation_d8pyf")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_omxj0"]
+bg_color = Color(0.027451, 0.184314, 0.266667, 0.443137)
+
+[node name="day_four" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lscqx")
+
+[node name="office" parent="." instance=ExtResource("1_jpomi")]
+
+[node name="mc" type="AnimatedSprite2D" parent="."]
+z_index = 7
+position = Vector2(15, -559)
+sprite_frames = SubResource("SpriteFrames_dgkqk")
+animation = &"idle"
+autoplay = "walk"
+
+[node name="Camera2D" type="Camera2D" parent="mc"]
+zoom = Vector2(1.5, 1.5)
+
+[node name="fade" type="ColorRect" parent="mc"]
+z_index = 5
+offset_left = -246.0
+offset_top = -166.0
+offset_right = -206.0
+offset_bottom = -126.0
+scale = Vector2(12.52, 8.56)
+color = Color(0, 0, 0, 1)
+
+[node name="Button" type="Button" parent="mc"]
+z_index = 5
+offset_left = 121.0
+offset_top = -145.0
+offset_right = 211.0
+offset_bottom = -119.0
+scale = Vector2(1.2, 1.52)
+theme_override_fonts/font = ExtResource("9_wcalp")
+text = "Skip ⏯"
+script = ExtResource("10_omxj0")
+
+[node name="keys" type="Sprite2D" parent="mc"]
+visible = false
+z_index = 7
+position = Vector2(26, -26)
+scale = Vector2(1.68, 1.72)
+texture = ExtResource("11_1o58x")
+
+[node name="cinematic" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_lscqx")
+}
+
+[node name="pc" type="Sprite2D" parent="."]
+visible = false
+z_index = 20
+position = Vector2(307, -329)
+scale = Vector2(4.6, 3.96)
+texture = ExtResource("11_omxj0")
+
+[node name="message" type="Label" parent="."]
+visible = false
+z_index = 20
+layout_mode = 0
+offset_left = 194.0
+offset_top = -403.0
+offset_right = 347.0
+offset_bottom = -328.0
+scale = Vector2(0.8, 1)
+theme_override_fonts/font = ExtResource("9_wcalp")
+theme_override_styles/normal = SubResource("StyleBoxFlat_omxj0")
+text = "¿Cuánto tiempo vas
+ a esperar a que las
+ cosas cambien?"
+vertical_alignment = 1

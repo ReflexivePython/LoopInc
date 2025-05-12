@@ -1,0 +1,427 @@
+[gd_scene load_steps=55 format=3 uid="uid://cgfqre28kl5yg"]
+
+[ext_resource type="Script" uid="uid://dfq3ixulln3cn" path="res://scripts/minigames/ai_m_a_good_worker/ia_m_a_good_worker.gd" id="1_nmnni"]
+[ext_resource type="Texture2D" uid="uid://whboyuav6333" path="res://sprites/minigames/ia_m_a_good_worker/bg.png" id="1_wccqa"]
+[ext_resource type="FontFile" uid="uid://gv3nscgxooho" path="res://fonts/dogicapixel.ttf" id="2_lclf2"]
+[ext_resource type="Texture2D" uid="uid://d0jmev2fmmgil" path="res://sprites/minigames/ia_m_a_good_worker/angry_karen/angry_karen_0001.png" id="3_2084a"]
+[ext_resource type="Texture2D" uid="uid://dh337f0f7lexk" path="res://sprites/minigames/ia_m_a_good_worker/happy_karen/happy_karen_0001.png" id="3_tmpo2"]
+[ext_resource type="Texture2D" uid="uid://h5f00hsxlkhv" path="res://sprites/minigames/ia_m_a_good_worker/neutral_karen/happy_karen_0001.png" id="3_ujf66"]
+[ext_resource type="Texture2D" uid="uid://bffus46lltow3" path="res://sprites/minigames/ia_m_a_good_worker/neutral_karen/happy_karen_0002.png" id="4_3bbed"]
+[ext_resource type="Texture2D" uid="uid://drres4yx5cxll" path="res://sprites/minigames/ia_m_a_good_worker/angry_karen/angry_karen_0002.png" id="4_nmnni"]
+[ext_resource type="Texture2D" uid="uid://bjf6338u4e7qj" path="res://sprites/minigames/ia_m_a_good_worker/happy_karen/happy_karen_0002.png" id="4_vtf2m"]
+[ext_resource type="Texture2D" uid="uid://cih4allyptd6l" path="res://sprites/minigames/ia_m_a_good_worker/button.png" id="4_wxdqd"]
+[ext_resource type="Texture2D" uid="uid://crj1hf5rleaql" path="res://sprites/minigames/ia_m_a_good_worker/neutral_karen/happy_karen_0003.png" id="5_dh2b2"]
+[ext_resource type="Texture2D" uid="uid://c5y3xbbyd5wy4" path="res://sprites/minigames/ia_m_a_good_worker/angry_karen/angry_karen_0003.png" id="5_fhxbl"]
+[ext_resource type="Texture2D" uid="uid://dveobnktkbtlk" path="res://sprites/minigames/ia_m_a_good_worker/happy_karen/happy_karen_0003.png" id="5_jkxkg"]
+[ext_resource type="Texture2D" uid="uid://b5b2xe1g4sulg" path="res://sprites/minigames/ia_m_a_good_worker/angry_karen/angry_karen_0004.png" id="6_3daje"]
+[ext_resource type="Texture2D" uid="uid://bwais7rpl5jvq" path="res://sprites/minigames/ia_m_a_good_worker/neutral_karen/happy_karen_0004.png" id="6_ejf8r"]
+[ext_resource type="Texture2D" uid="uid://dcq2o7ekld4au" path="res://sprites/minigames/ia_m_a_good_worker/happy_karen/happy_karen_0004.png" id="6_f8hef"]
+[ext_resource type="Texture2D" uid="uid://dht1tb4tu1kro" path="res://sprites/minigames/ia_m_a_good_worker/neutral_karen/happy_karen_0005.png" id="7_j2x38"]
+[ext_resource type="Texture2D" uid="uid://dtaa2oukea47u" path="res://sprites/minigames/ia_m_a_good_worker/happy_karen/happy_karen_0005.png" id="7_ksh1c"]
+[ext_resource type="Texture2D" uid="uid://dwlepyumqp5pl" path="res://sprites/minigames/ia_m_a_good_worker/angry_karen/angry_karen_0005.png" id="7_wxdqd"]
+[ext_resource type="Texture2D" uid="uid://cjpx22omuxuiu" path="res://sprites/minigames/ia_m_a_good_worker/angry_karen/angry_karen_0006.png" id="8_a2x5o"]
+[ext_resource type="Texture2D" uid="uid://cxlf7tr278awn" path="res://sprites/minigames/ia_m_a_good_worker/happy_karen/happy_karen_0006.png" id="8_cjsuy"]
+[ext_resource type="Texture2D" uid="uid://chcoasiko5q4p" path="res://sprites/minigames/ia_m_a_good_worker/neutral_karen/happy_karen_0006.png" id="8_qhjhs"]
+[ext_resource type="Texture2D" uid="uid://boaikgccwpiis" path="res://sprites/minigames/ia_m_a_good_worker/neutral_karen/happy_karen_0007.png" id="9_dhla6"]
+[ext_resource type="Texture2D" uid="uid://cehhtlgywd40l" path="res://sprites/minigames/ia_m_a_good_worker/happy_karen/happy_karen_0007.png" id="9_ht0am"]
+[ext_resource type="Texture2D" uid="uid://btijdkn14kcer" path="res://sprites/minigames/ia_m_a_good_worker/angry_karen/angry_karen_0007.png" id="9_uudis"]
+[ext_resource type="Texture2D" uid="uid://jfga4356diyt" path="res://sprites/minigames/ia_m_a_good_worker/neutral_karen/happy_karen_0008.png" id="10_i27h3"]
+[ext_resource type="Texture2D" uid="uid://cgtucn62iigw6" path="res://sprites/minigames/ia_m_a_good_worker/angry_karen/angry_karen_0008.png" id="10_vakbn"]
+[ext_resource type="Texture2D" uid="uid://c6m7v325uy75t" path="res://sprites/minigames/ia_m_a_good_worker/happy_karen/happy_karen_0008.png" id="10_xewlb"]
+[ext_resource type="Texture2D" uid="uid://d3y21h5pj3j3t" path="res://sprites/minigames/ia_m_a_good_worker/happy_karen/happy_karen_0009.png" id="11_87vaa"]
+[ext_resource type="Texture2D" uid="uid://q80u0b2s6sa0" path="res://sprites/minigames/ia_m_a_good_worker/neutral_karen/happy_karen_0009.png" id="11_gu6yb"]
+[ext_resource type="Texture2D" uid="uid://bgxbggixuc1ww" path="res://sprites/minigames/ia_m_a_good_worker/angry_karen/angry_karen_0009.png" id="11_rt7we"]
+[ext_resource type="Texture2D" uid="uid://bvcnpt5sekooi" path="res://sprites/minigames/ia_m_a_good_worker/happy_karen/happy_karen_0010.png" id="12_18i6c"]
+[ext_resource type="Texture2D" uid="uid://bxhgv7wy1fs5" path="res://sprites/minigames/ia_m_a_good_worker/neutral_karen/happy_karen_0010.png" id="12_nohqg"]
+[ext_resource type="Texture2D" uid="uid://dlaq7ga5ao2dd" path="res://sprites/minigames/ia_m_a_good_worker/angry_karen/angry_karen_0010.png" id="12_sydwr"]
+[ext_resource type="Texture2D" uid="uid://05yj7tj52r0c" path="res://sprites/minigames/ia_m_a_good_worker/happy_karen/happy_karen_0011.png" id="13_agdgk"]
+[ext_resource type="Texture2D" uid="uid://bj6hka84ixq" path="res://sprites/minigames/ia_m_a_good_worker/angry_karen/angry_karen_0011.png" id="13_suo8i"]
+[ext_resource type="Texture2D" uid="uid://h6y42cvyvc8i" path="res://sprites/minigames/ia_m_a_good_worker/neutral_karen/happy_karen_0011.png" id="13_y03v4"]
+[ext_resource type="Texture2D" uid="uid://buwl1bp7dklp4" path="res://sprites/minigames/ia_m_a_good_worker/angry_karen/angry_karen_0012.png" id="14_gwqui"]
+[ext_resource type="Texture2D" uid="uid://cic5pak1g747r" path="res://sprites/minigames/ia_m_a_good_worker/neutral_karen/happy_karen_0012.png" id="14_kof4j"]
+[ext_resource type="Texture2D" uid="uid://b58b26eir8fpc" path="res://sprites/minigames/ia_m_a_good_worker/happy_karen/happy_karen_0012.png" id="14_q6tlj"]
+[ext_resource type="FontFile" uid="uid://km1mu0sh3y3k" path="res://fonts/dogicapixelbold.ttf" id="40_fhxbl"]
+[ext_resource type="Script" uid="uid://bpi7kjp81q42s" path="res://scripts/minigames/ai_m_a_good_worker/ai_instructions.gd" id="41_3daje"]
+[ext_resource type="Texture2D" uid="uid://dvmska5sq4ydh" path="res://sprites/minigames/ia_m_a_good_worker/instructions.png" id="43_a2x5o"]
+[ext_resource type="AudioStream" uid="uid://cy1kty47uswkm" path="res://sfx/minigames/ai_m_a_good_worker/quiz_music.mp3" id="44_rt7we"]
+[ext_resource type="AudioStream" uid="uid://vnmcprxj22vk" path="res://sfx/minigames/ai_m_a_good_worker/Success.mp3" id="44_uudis"]
+[ext_resource type="AudioStream" uid="uid://cle2wvl5ehk8w" path="res://sfx/minigames/ai_m_a_good_worker/wrong.mp3" id="45_vakbn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vakbn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wxdqd"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a2x5o"]
+texture = ExtResource("4_wxdqd")
+texture_margin_left = 1.0
+texture_margin_right = 1.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wxdqd"]
+texture = ExtResource("4_wxdqd")
+texture_margin_left = 1.0
+texture_margin_right = 1.0
+modulate_color = Color(0.235294, 0.235294, 0.235294, 0.490196)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tmpo2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_2084a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_nmnni")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_fhxbl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_3daje")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_wxdqd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_a2x5o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_uudis")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_vakbn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_rt7we")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_sydwr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_suo8i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_gwqui")
+}],
+"loop": true,
+"name": &"angry",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_tmpo2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_vtf2m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_jkxkg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_f8hef")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ksh1c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_cjsuy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ht0am")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_xewlb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_87vaa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_18i6c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_agdgk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_q6tlj")
+}],
+"loop": true,
+"name": &"happy",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_ujf66")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_3bbed")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_dh2b2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ejf8r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_j2x38")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_qhjhs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_dhla6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_i27h3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_gu6yb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_nohqg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_y03v4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_kof4j")
+}],
+"loop": true,
+"name": &"neutral",
+"speed": 12.0
+}]
+
+[sub_resource type="Animation" id="Animation_3daje"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(600, 281)]
+}
+
+[sub_resource type="Animation" id="Animation_fhxbl"]
+resource_name = "score"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.966667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(600, 281), Vector2(600, 261)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wxdqd"]
+_data = {
+&"RESET": SubResource("Animation_3daje"),
+&"score": SubResource("Animation_fhxbl")
+}
+
+[node name="ia_m_a_good_worker" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nmnni")
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(361, 242)
+scale = Vector2(11.28, 7.56)
+texture = ExtResource("1_wccqa")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 6.0
+offset_right = 57.0
+offset_bottom = 33.0
+scale = Vector2(1.36, 1.44)
+theme_override_fonts/font = ExtResource("2_lclf2")
+theme_override_styles/background = SubResource("StyleBoxEmpty_vakbn")
+
+[node name="message" type="Label" parent="."]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 83.0
+offset_right = 641.0
+offset_bottom = 114.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_lclf2")
+text = "Neque porro quisquam est qui dolorem ipsum
+ quia dolor sit amet, consectetur, adipisci velit"
+autowrap_mode = 3
+
+[node name="option_one" type="Button" parent="."]
+z_index = 4
+layout_mode = 0
+offset_left = 71.0
+offset_top = 187.0
+offset_right = 471.0
+offset_bottom = 218.0
+theme_override_fonts/font = ExtResource("2_lclf2")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_wxdqd")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_a2x5o")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_a2x5o")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_a2x5o")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_a2x5o")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_a2x5o")
+theme_override_styles/hover = SubResource("StyleBoxTexture_wxdqd")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_a2x5o")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_a2x5o")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_a2x5o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_a2x5o")
+autowrap_mode = 3
+
+[node name="option_two" type="Button" parent="."]
+z_index = 4
+layout_mode = 0
+offset_left = 71.0
+offset_top = 257.0
+offset_right = 471.0
+offset_bottom = 288.0
+theme_override_fonts/font = ExtResource("2_lclf2")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_wxdqd")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_a2x5o")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_a2x5o")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_a2x5o")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_a2x5o")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_a2x5o")
+theme_override_styles/hover = SubResource("StyleBoxTexture_wxdqd")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_a2x5o")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_a2x5o")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_a2x5o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_a2x5o")
+autowrap_mode = 3
+
+[node name="option_three" type="Button" parent="."]
+z_index = 4
+layout_mode = 0
+offset_left = 71.0
+offset_top = 328.0
+offset_right = 471.0
+offset_bottom = 359.0
+theme_override_fonts/font = ExtResource("2_lclf2")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_wxdqd")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_a2x5o")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_a2x5o")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_a2x5o")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_a2x5o")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_a2x5o")
+theme_override_styles/hover = SubResource("StyleBoxTexture_wxdqd")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_a2x5o")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_a2x5o")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_a2x5o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_a2x5o")
+autowrap_mode = 3
+
+[node name="k_a_r_e_n_" type="AnimatedSprite2D" parent="."]
+position = Vector2(624, 394)
+scale = Vector2(9.28, 9.12)
+sprite_frames = SubResource("SpriteFrames_tmpo2")
+animation = &"angry"
+frame = 5
+frame_progress = 0.950274
+
+[node name="points_label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 600.0
+offset_top = 281.0
+offset_right = 640.0
+offset_bottom = 304.0
+scale = Vector2(1.41771, 1.48619)
+theme_override_fonts/font = ExtResource("40_fhxbl")
+text = "+1"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="points_label"]
+libraries = {
+&"": SubResource("AnimationLibrary_wxdqd")
+}
+
+[node name="instructions" type="ColorRect" parent="."]
+z_index = 10
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(18.2161, 12.092)
+color = Color(0, 0, 0, 1)
+script = ExtResource("41_3daje")
+
+[node name="Label" type="Label" parent="instructions"]
+layout_mode = 0
+offset_left = 8.61875
+offset_top = 4.05227
+offset_right = 162.619
+offset_bottom = 27.0523
+scale = Vector2(0.145808, 0.414488)
+theme_override_fonts/font = ExtResource("2_lclf2")
+theme_override_font_sizes/font_size = 16
+text = "Instructions"
+
+[node name="counter" type="Label" parent="instructions"]
+layout_mode = 0
+offset_left = 16.9314
+offset_top = 28.7338
+offset_right = 56.9314
+offset_bottom = 51.7338
+scale = Vector2(0.121699, 0.343815)
+theme_override_fonts/font = ExtResource("2_lclf2")
+text = "3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="instructions" type="Sprite2D" parent="instructions"]
+position = Vector2(19.5117, 20.5465)
+scale = Vector2(0.27317, 0.401257)
+texture = ExtResource("43_a2x5o")
+
+[node name="QuizMusic" type="AudioStreamPlayer" parent="instructions"]
+stream = ExtResource("44_rt7we")
+parameters/looping = true
+
+[node name="Success" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("44_uudis")
+
+[node name="Wrong" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("45_vakbn")
+
+[node name="warns" type="Label" parent="."]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 416.0
+offset_right = 74.0
+offset_bottom = 439.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_lclf2")

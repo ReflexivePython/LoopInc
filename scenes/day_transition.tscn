@@ -1,0 +1,150 @@
+[gd_scene load_steps=7 format=3 uid="uid://cmxytcx5tr4cv"]
+
+[ext_resource type="FontFile" uid="uid://km1mu0sh3y3k" path="res://fonts/dogicapixelbold.ttf" id="1_r8vl7"]
+[ext_resource type="Script" uid="uid://diiw6fumfko5h" path="res://scripts/technical_scripts/day_transition.gd" id="1_rmgir"]
+[ext_resource type="FontFile" uid="uid://gv3nscgxooho" path="res://fonts/dogicapixel.ttf" id="3_d03p6"]
+
+[sub_resource type="Animation" id="Animation_d03p6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("last_day:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(326, 236)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("last_day:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("day:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_rmgir"]
+resource_name = "day_transition"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("last_day:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333, 0.933333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(326, 230), Vector2(326, 260)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("last_day:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.933333),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("day:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.933333),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_d03p6"]
+_data = {
+&"RESET": SubResource("Animation_d03p6"),
+&"day_transition": SubResource("Animation_rmgir")
+}
+
+[node name="day_transition" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rmgir")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(18.16, 12.24)
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 274.0
+offset_top = 190.0
+offset_right = 415.0
+offset_bottom = 230.0
+theme_override_fonts/font = ExtResource("1_r8vl7")
+theme_override_font_sizes/font_size = 45
+text = "DAY"
+
+[node name="day" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 326.0
+offset_top = 260.0
+offset_right = 366.0
+offset_bottom = 283.0
+theme_override_fonts/font = ExtResource("1_r8vl7")
+theme_override_font_sizes/font_size = 25
+text = "7"
+
+[node name="last_day" type="Label" parent="."]
+layout_mode = 0
+offset_left = 326.0
+offset_top = 236.0
+offset_right = 366.0
+offset_bottom = 259.0
+theme_override_fonts/font = ExtResource("1_r8vl7")
+theme_override_font_sizes/font_size = 25
+text = "7"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_d03p6")
+}
+
+[node name="saved_state" type="Label" parent="."]
+layout_mode = 0
+offset_left = 464.0
+offset_top = 449.0
+offset_right = 708.0
+offset_bottom = 472.0
+theme_override_fonts/font = ExtResource("3_d03p6")

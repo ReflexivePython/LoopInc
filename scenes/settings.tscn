@@ -1,0 +1,104 @@
+[gd_scene load_steps=4 format=3 uid="uid://drhwpedtnasa6"]
+
+[ext_resource type="Script" uid="uid://jgh2id1viahd" path="res://scripts/menu/settings.gd" id="1_5p8wc"]
+[ext_resource type="FontFile" uid="uid://km1mu0sh3y3k" path="res://fonts/dogicapixelbold.ttf" id="2_6wm04"]
+[ext_resource type="FontFile" uid="uid://gv3nscgxooho" path="res://fonts/dogicapixel.ttf" id="3_f4mfi"]
+
+[node name="settings" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5p8wc")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(18.4, 12.44)
+color = Color(0, 0, 0, 1)
+
+[node name="language_settings" type="Label" parent="."]
+layout_mode = 0
+offset_left = 119.0
+offset_top = 67.0
+offset_right = 193.0
+offset_bottom = 90.0
+scale = Vector2(1.27105, 1.40294)
+theme_override_fonts/font = ExtResource("2_6wm04")
+text = "Label"
+
+[node name="english" type="Button" parent="language_settings"]
+layout_mode = 0
+offset_top = 27.0859
+offset_right = 72.0
+offset_bottom = 49.0859
+theme_override_fonts/font = ExtResource("3_f4mfi")
+text = "Label"
+
+[node name="spanish" type="Button" parent="language_settings"]
+layout_mode = 0
+offset_left = 0.786748
+offset_top = 57.7357
+offset_right = 72.7868
+offset_bottom = 79.7357
+theme_override_fonts/font = ExtResource("3_f4mfi")
+text = "Label"
+
+[node name="return" type="Button" parent="."]
+layout_mode = 0
+offset_left = 539.0
+offset_top = 410.0
+offset_right = 625.0
+offset_bottom = 441.0
+scale = Vector2(1.92, 1.52)
+theme_override_fonts/font = ExtResource("3_f4mfi")
+text = "return
+"
+
+[node name="movement" type="Label" parent="."]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 198.0
+offset_right = 194.0
+offset_bottom = 221.0
+scale = Vector2(1.27105, 1.40294)
+theme_override_fonts/font = ExtResource("2_6wm04")
+text = "Label"
+
+[node name="wasd" type="Button" parent="movement"]
+layout_mode = 0
+offset_top = 27.0859
+offset_right = 72.0
+offset_bottom = 49.0859
+theme_override_fonts/font = ExtResource("3_f4mfi")
+text = "Label"
+
+[node name="arrows" type="Button" parent="movement"]
+layout_mode = 0
+offset_left = 0.786748
+offset_top = 57.7357
+offset_right = 72.7868
+offset_bottom = 79.7357
+theme_override_fonts/font = ExtResource("3_f4mfi")
+text = "Label"
+
+[node name="mute" type="Label" parent="."]
+layout_mode = 0
+offset_left = 400.0
+offset_top = 67.0
+offset_right = 474.0
+offset_bottom = 90.0
+scale = Vector2(1.27105, 1.40294)
+theme_override_fonts/font = ExtResource("2_6wm04")
+text = "Label"
+
+[node name="yes" type="Button" parent="mute"]
+layout_mode = 0
+offset_top = 27.0859
+offset_right = 72.0
+offset_bottom = 49.0859
+theme_override_fonts/font = ExtResource("3_f4mfi")
+text = "Label"

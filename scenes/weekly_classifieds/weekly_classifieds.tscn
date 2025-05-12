@@ -1,0 +1,214 @@
+[gd_scene load_steps=24 format=3 uid="uid://byajeothx0hk8"]
+
+[ext_resource type="Texture2D" uid="uid://djujlriig3748" path="res://sprites/minigames/weekly_classifieds/bg.png" id="1_3hmk3"]
+[ext_resource type="Script" uid="uid://cvgonvpoxyluk" path="res://scenes/weekly_classifieds/weekly_classifieds.gd" id="1_tqt5b"]
+[ext_resource type="FontFile" uid="uid://gv3nscgxooho" path="res://fonts/dogicapixel.ttf" id="2_vnbo0"]
+[ext_resource type="FontFile" uid="uid://km1mu0sh3y3k" path="res://fonts/dogicapixelbold.ttf" id="3_s2lqj"]
+[ext_resource type="Script" uid="uid://ca3lwglpei6el" path="res://scenes/weekly_classifieds/wc_instructions.gd" id="5_0p8hx"]
+[ext_resource type="Texture2D" uid="uid://doy6lfvuper1l" path="res://sprites/minigames/weekly_classifieds/answer.png" id="5_foje4"]
+[ext_resource type="Texture2D" uid="uid://hl3hobnvohg3" path="res://sprites/minigames/weekly_classifieds/add_adress.png" id="6_262um"]
+[ext_resource type="Texture2D" uid="uid://dmgx68rx54wpq" path="res://sprites/minigames/weekly_classifieds/archive.png" id="6_ehd3q"]
+[ext_resource type="Texture2D" uid="uid://6f6l1kty5hec" path="res://sprites/minigames/weekly_classifieds/forward.png" id="7_foje4"]
+[ext_resource type="Texture2D" uid="uid://cgkot3ml7sxle" path="res://sprites/minigames/weekly_classifieds/delete.png" id="7_rnc1t"]
+[ext_resource type="Texture2D" uid="uid://bfhf3a3bs3leq" path="res://sprites/minigames/weekly_classifieds/read_all.png" id="8_ehd3q"]
+[ext_resource type="Texture2D" uid="uid://bd52kkmra1erf" path="res://sprites/minigames/weekly_classifieds/instructions.png" id="9_khruo"]
+[ext_resource type="AudioStream" uid="uid://dq85x40862k78" path="res://sfx/minigames/weekly_classifieds/bg_ambiance.mp3" id="10_ou1wt"]
+[ext_resource type="Texture2D" uid="uid://dxp4avd5kot2l" path="res://sprites/minigames/write_faster/time_bar.png" id="13_065vw"]
+[ext_resource type="Texture2D" uid="uid://ea5k8taf24yu" path="res://sprites/minigames/write_faster/time_progress.png" id="14_ou1wt"]
+[ext_resource type="AudioStream" uid="uid://devq42peomsrs" path="res://sfx/minigames/weekly_classifieds/clic.mp3" id="16_f54wh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_262um"]
+bg_color = Color(0.0296024, 0.209121, 0.432511, 0.380392)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ehd3q"]
+texture = ExtResource("5_foje4")
+modulate_color = Color(0.581838, 0.581838, 0.581838, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_foje4"]
+texture = ExtResource("5_foje4")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rnc1t"]
+texture = ExtResource("6_ehd3q")
+modulate_color = Color(0.601223, 0.601223, 0.601223, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_khruo"]
+texture = ExtResource("6_ehd3q")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sns0f"]
+texture = ExtResource("7_rnc1t")
+modulate_color = Color(0.617455, 0.617455, 0.617455, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_065vw"]
+texture = ExtResource("7_rnc1t")
+
+[node name="weekly_classifieds" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tqt5b")
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(360, 240)
+scale = Vector2(11.28, 7.48)
+texture = ExtResource("1_3hmk3")
+
+[node name="mail" type="Label" parent="."]
+layout_mode = 0
+offset_left = 47.0
+offset_top = 173.0
+offset_right = 537.0
+offset_bottom = 196.0
+theme_override_fonts/font = ExtResource("2_vnbo0")
+theme_override_styles/normal = SubResource("StyleBoxFlat_262um")
+text = "I won't do that \"lorem ipsum\" text again"
+autowrap_mode = 3
+text_direction = 1
+
+[node name="answer" type="Button" parent="."]
+layout_mode = 0
+offset_left = 85.0
+offset_top = 380.0
+offset_right = 191.0
+offset_bottom = 411.0
+theme_override_fonts/font = ExtResource("3_s2lqj")
+theme_override_styles/focus = SubResource("StyleBoxTexture_ehd3q")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_ehd3q")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_ehd3q")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_ehd3q")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_ehd3q")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_ehd3q")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ehd3q")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_ehd3q")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ehd3q")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_foje4")
+theme_override_styles/normal = SubResource("StyleBoxTexture_foje4")
+text = "answer"
+
+[node name="archive" type="Button" parent="."]
+layout_mode = 0
+offset_left = 229.0
+offset_top = 380.0
+offset_right = 343.0
+offset_bottom = 411.0
+theme_override_fonts/font = ExtResource("3_s2lqj")
+theme_override_styles/focus = SubResource("StyleBoxTexture_rnc1t")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_rnc1t")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_rnc1t")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_rnc1t")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_rnc1t")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_rnc1t")
+theme_override_styles/hover = SubResource("StyleBoxTexture_rnc1t")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_rnc1t")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_rnc1t")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_khruo")
+theme_override_styles/normal = SubResource("StyleBoxTexture_khruo")
+text = "archive"
+
+[node name="delete" type="Button" parent="."]
+layout_mode = 0
+offset_left = 375.0
+offset_top = 380.0
+offset_right = 473.0
+offset_bottom = 411.0
+theme_override_fonts/font = ExtResource("3_s2lqj")
+theme_override_styles/focus = SubResource("StyleBoxTexture_sns0f")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_sns0f")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_sns0f")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_sns0f")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_sns0f")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_sns0f")
+theme_override_styles/hover = SubResource("StyleBoxTexture_sns0f")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_sns0f")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_sns0f")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_065vw")
+theme_override_styles/normal = SubResource("StyleBoxTexture_065vw")
+text = "delete"
+
+[node name="user" type="Label" parent="."]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 16.0
+offset_right = 62.0
+offset_bottom = 39.0
+theme_override_fonts/font = ExtResource("3_s2lqj")
+
+[node name="brand" type="Label" parent="."]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 445.0
+offset_right = 53.0
+offset_bottom = 468.0
+theme_override_fonts/font = ExtResource("3_s2lqj")
+
+[node name="instructions" type="ColorRect" parent="."]
+z_index = 10
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(18.2161, 12.092)
+color = Color(0, 0, 0, 1)
+script = ExtResource("5_0p8hx")
+
+[node name="Label" type="Label" parent="instructions"]
+layout_mode = 0
+offset_left = 7.57572
+offset_top = 1.32319
+offset_right = 161.576
+offset_bottom = 24.3232
+scale = Vector2(0.145808, 0.414488)
+theme_override_fonts/font = ExtResource("2_vnbo0")
+theme_override_font_sizes/font_size = 16
+text = "Instructions"
+
+[node name="counter" type="Label" parent="instructions"]
+layout_mode = 0
+offset_left = 17.3473
+offset_top = 30.6814
+offset_right = 57.3473
+offset_bottom = 53.6814
+scale = Vector2(0.121699, 0.343815)
+theme_override_fonts/font = ExtResource("2_vnbo0")
+text = "3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="instructions" type="Sprite2D" parent="instructions"]
+position = Vector2(19.3236, 19.7651)
+scale = Vector2(0.242429, 0.364869)
+texture = ExtResource("9_khruo")
+
+[node name="BgAmbiance" type="AudioStreamPlayer" parent="instructions"]
+stream = ExtResource("10_ou1wt")
+volume_db = -34.65
+parameters/looping = true
+
+[node name="add_adress" type="Sprite2D" parent="."]
+position = Vector2(83, 120)
+scale = Vector2(4.68, 4.2)
+texture = ExtResource("6_262um")
+
+[node name="forward" type="Sprite2D" parent="."]
+position = Vector2(198, 120)
+scale = Vector2(4.68, 4.2)
+texture = ExtResource("7_foje4")
+
+[node name="read_all" type="Sprite2D" parent="."]
+position = Vector2(317, 120)
+scale = Vector2(4.68, 4.2)
+texture = ExtResource("8_ehd3q")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+layout_mode = 0
+offset_left = 406.0
+offset_top = 10.0
+offset_right = 446.0
+offset_bottom = 50.0
+scale = Vector2(5.28, 3.6)
+texture_over = ExtResource("13_065vw")
+texture_progress = ExtResource("14_ou1wt")
+
+[node name="Clic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("16_f54wh")

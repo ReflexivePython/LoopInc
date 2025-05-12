@@ -1,0 +1,68 @@
+[gd_scene load_steps=7 format=3 uid="uid://xr6ai7tv82ih"]
+
+[ext_resource type="Script" uid="uid://1s3j7x5s71nq" path="res://scripts/minigames/print_n_seal/spawn_doc.gd" id="1_iav62"]
+[ext_resource type="Texture2D" uid="uid://vi4wwihqbqoh" path="res://sprites/minigames/print_n_seal/doc.png" id="1_qe2my"]
+[ext_resource type="Script" uid="uid://dbg5rlb1g2efw" path="res://scripts/minigames/print_n_seal/doc_type.gd" id="1_v5tfb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qe2my"]
+size = Vector2(47.6976, 64)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7exfu"]
+load_path = "res://.godot/imported/seal.png-d45e8a7816b51d12957ec148da72d791.ctex"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d2bdw"]
+size = Vector2(70.0381, 502)
+
+[node name="document" type="Control"]
+z_index = 2
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_iav62")
+
+[node name="document" type="Area2D" parent="." node_paths=PackedStringArray("seal", "left_area", "right_area")]
+z_index = 2
+position = Vector2(-758, -62)
+scale = Vector2(3.029, 3.5)
+script = ExtResource("1_v5tfb")
+seal = NodePath("../seal")
+left_area = NodePath("../android_touch/left_area")
+right_area = NodePath("../android_touch/right_area")
+
+[node name="Sprite2D" type="Sprite2D" parent="document"]
+z_index = 2
+position = Vector2(116, 88)
+texture = ExtResource("1_qe2my")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="document"]
+z_index = 2
+position = Vector2(116.025, 88)
+shape = SubResource("RectangleShape2D_qe2my")
+
+[node name="seal" type="Sprite2D" parent="."]
+z_index = 4
+position = Vector2(-250, 38)
+scale = Vector2(2.16, 1.84)
+texture = SubResource("CompressedTexture2D_7exfu")
+
+[node name="android_touch" type="CanvasLayer" parent="."]
+layer = 20
+
+[node name="left_area" type="Area2D" parent="android_touch"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="android_touch/left_area"]
+position = Vector2(180.5, 244)
+scale = Vector2(5.24, 1)
+shape = SubResource("RectangleShape2D_d2bdw")
+
+[node name="right_area" type="Area2D" parent="android_touch"]
+position = Vector2(369, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="android_touch/right_area"]
+position = Vector2(180.5, 244)
+scale = Vector2(5.24, 1)
+shape = SubResource("RectangleShape2D_d2bdw")

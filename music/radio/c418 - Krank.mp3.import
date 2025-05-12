@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ca8np6ts54oca"
+path="res://.godot/imported/c418 - Krank.mp3-2a2606d407f37daa8e31875d2de12fff.mp3str"
+
+[deps]
+
+source_file="res://music/radio/c418 - Krank.mp3"
+dest_files=["res://.godot/imported/c418 - Krank.mp3-2a2606d407f37daa8e31875d2de12fff.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

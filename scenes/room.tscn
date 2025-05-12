@@ -1,0 +1,331 @@
+[gd_scene load_steps=47 format=4 uid="uid://cipa7lv36x363"]
+
+[ext_resource type="Script" uid="uid://cfxmn7fw66v2k" path="res://scripts/technical_scripts/room.gd" id="1_spkk5"]
+[ext_resource type="Texture2D" uid="uid://cd4ilmpyd3jx4" path="res://sprites/background/room/floor/room_floor.png" id="2_14vil"]
+[ext_resource type="Texture2D" uid="uid://b35sajuf2ech0" path="res://sprites/background/room/floor/room_floor_one.png" id="3_jxe34"]
+[ext_resource type="Texture2D" uid="uid://ddsu2ci55851a" path="res://sprites/background/room/floor/room_floor_two.png" id="4_jn645"]
+[ext_resource type="Texture2D" uid="uid://dfqe31mqwcrm" path="res://sprites/background/room/wall/room_walls.png" id="5_jn645"]
+[ext_resource type="Texture2D" uid="uid://b30s7l8rw2esc" path="res://sprites/room_deco/bed.png" id="6_7dqbv"]
+[ext_resource type="Texture2D" uid="uid://2xwsp4t1srbd" path="res://sprites/background/room/wall/room_walls_one.png" id="6_qvc4m"]
+[ext_resource type="Texture2D" uid="uid://bm56kdeipd58j" path="res://sprites/room_deco/bed_variant.png" id="7_ybpoa"]
+[ext_resource type="Texture2D" uid="uid://bkm8vwfppx4d2" path="res://sprites/room_deco/table.png" id="8_ybpoa"]
+[ext_resource type="Texture2D" uid="uid://6hxgm7tnwxon" path="res://sprites/room_deco/table_variant.png" id="9_qtoah"]
+[ext_resource type="Texture2D" uid="uid://bjhtbssdhr8ne" path="res://sprites/room_deco/chair.png" id="10_qtoah"]
+[ext_resource type="Texture2D" uid="uid://djjjxwmnra22x" path="res://sprites/room_deco/clock.png" id="11_eom3m"]
+[ext_resource type="Texture2D" uid="uid://c2ixih5pctr11" path="res://sprites/room_deco/radio.png" id="12_tk5fv"]
+[ext_resource type="Texture2D" uid="uid://bgv8rd5co1lqa" path="res://sprites/room_deco/door.png" id="13_w68ji"]
+[ext_resource type="Script" uid="uid://t6tw13gbijqv" path="res://scripts/technical_scripts/door.gd" id="14_23wr2"]
+[ext_resource type="PackedScene" uid="uid://b08c0c8jue1uw" path="res://scenes/mc.tscn" id="15_3j2fx"]
+[ext_resource type="FontFile" uid="uid://gv3nscgxooho" path="res://fonts/dogicapixel.ttf" id="15_vfrn5"]
+[ext_resource type="Texture2D" uid="uid://remfjk7cp03w" path="res://sprites/npcs/interact_bubble.png" id="16_katsu"]
+[ext_resource type="StyleBox" uid="uid://bjxurxuuqw6wu" path="res://fonts/chat.tres" id="18_2ulci"]
+[ext_resource type="Script" uid="uid://b5vjuvmua5gwe" path="res://scripts/technical_scripts/sleep.gd" id="18_katsu"]
+[ext_resource type="AudioStream" uid="uid://c00oqywttcvwl" path="res://music/sfx/door_sfx.mp3" id="21_a5qmg"]
+[ext_resource type="Script" uid="uid://c0g7un6otwkal" path="res://scripts/technical_scripts/clock.gd" id="21_yggoe"]
+[ext_resource type="AudioStream" uid="uid://0r01qt1dd1hi" path="res://music/sfx/door_locked.mp3" id="22_0tws2"]
+[ext_resource type="Script" uid="uid://c7b7453wolql3" path="res://scripts/technical_scripts/radio.gd" id="22_2ulci"]
+[ext_resource type="AudioStream" uid="uid://bopi73ma8yu1t" path="res://music/sfx/clock_sfx.mp3" id="22_kk8bn"]
+[ext_resource type="AudioStream" uid="uid://c28v7rvnujx4r" path="res://music/sfx/tunning_sfx.mp3" id="24_mc3m6"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qvc4m"]
+texture = ExtResource("2_14vil")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7dqbv"]
+texture = ExtResource("3_jxe34")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ybpoa"]
+texture = ExtResource("4_jn645")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_36trf"]
+tile_size = Vector2i(32, 32)
+sources/0 = SubResource("TileSetAtlasSource_qvc4m")
+sources/1 = SubResource("TileSetAtlasSource_7dqbv")
+sources/2 = SubResource("TileSetAtlasSource_ybpoa")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qtoah"]
+texture = ExtResource("5_jn645")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eom3m"]
+texture = ExtResource("6_qvc4m")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+
+[sub_resource type="TileSet" id="TileSet_tk5fv"]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 1
+sources/2 = SubResource("TileSetAtlasSource_qtoah")
+sources/3 = SubResource("TileSetAtlasSource_eom3m")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tk5fv"]
+texture = ExtResource("6_7dqbv")
+texture_region_size = Vector2i(32, 64)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w68ji"]
+texture = ExtResource("7_ybpoa")
+texture_region_size = Vector2i(32, 64)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_23wr2"]
+texture = ExtResource("8_ybpoa")
+texture_region_size = Vector2i(32, 64)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3j2fx"]
+texture = ExtResource("9_qtoah")
+texture_region_size = Vector2i(32, 64)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dynfe"]
+texture = ExtResource("10_qtoah")
+texture_region_size = Vector2i(32, 48)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16.4826, -23.7079, 16.0311, -24.1595, 15.5822, 21.6759, -16.4528, 21.6759)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vfrn5"]
+texture = ExtResource("11_eom3m")
+texture_region_size = Vector2i(32, 64)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16.4826, -23.7079, 16.0311, -24.1595, 15.5822, 21.6759, -16.4528, 21.6759)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_katsu"]
+texture = ExtResource("12_tk5fv")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+
+[sub_resource type="TileSet" id="TileSet_23wr2"]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 1
+sources/2 = SubResource("TileSetAtlasSource_tk5fv")
+sources/3 = SubResource("TileSetAtlasSource_w68ji")
+sources/4 = SubResource("TileSetAtlasSource_23wr2")
+sources/5 = SubResource("TileSetAtlasSource_3j2fx")
+sources/6 = SubResource("TileSetAtlasSource_dynfe")
+sources/7 = SubResource("TileSetAtlasSource_vfrn5")
+sources/8 = SubResource("TileSetAtlasSource_katsu")
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vfrn5"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jxwrd"]
+texture = ExtResource("16_katsu")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w68ji"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_spkk5"]
+radius = 11.2932
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yggoe"]
+radius = 14.0071
+
+[node name="room" type="Node2D"]
+script = ExtResource("1_spkk5")
+
+[node name="floor" type="TileMapLayer" parent="."]
+z_index = -1
+tile_map_data = PackedByteArray("AAACAAIAAQAAAAAAAAACAAMAAAAAAAAAAAACAAQAAAAAAAAAAAACAAUAAAAAAAAAAAACAAYAAAAAAAAAAAACAAcAAAAAAAAAAAACAAgAAQAAAAAAAAACAAkAAAAAAAAAAAADAAIAAAAAAAAAAAADAAMAAAAAAAAAAAADAAQAAAAAAAAAAAADAAUAAAAAAAAAAAADAAYAAAAAAAAAAAADAAcAAAAAAAAAAAADAAgAAAAAAAAAAAADAAkAAAAAAAAAAAAEAAIAAAAAAAAAAAAEAAMAAAAAAAAAAAAEAAQAAgAAAAAAAAAEAAUAAgAAAAAAAAAEAAYAAAAAAAAAAAAEAAcAAAAAAAAAAAAEAAgAAAAAAAAAAAAEAAkAAAAAAAAAAAAFAAIAAAAAAAAAAAAFAAMAAAAAAAAAAAAFAAQAAAAAAAAAAAAFAAUAAAAAAAAAAAAFAAYAAAAAAAAAAAAFAAcAAAAAAAAAAAAFAAgAAAAAAAAAAAAFAAkAAAAAAAAAAAAGAAIAAAAAAAAAAAAGAAMAAAAAAAAAAAAGAAQAAAAAAAAAAAAGAAUAAAAAAAAAAAAGAAYAAAAAAAAAAAAGAAcAAAAAAAAAAAAGAAgAAAAAAAAAAAAGAAkAAAAAAAAAAAAHAAIAAAAAAAAAAAAHAAMAAAAAAAAAAAAHAAQAAAAAAAAAAAAHAAUAAAAAAAAAAAAHAAYAAAAAAAAAAAAHAAcAAAAAAAAAAAAHAAgAAQAAAAAAAAAHAAkAAAAAAAAAAAAIAAIAAAAAAAAAAAAIAAMAAAAAAAAAAAAIAAQAAQAAAAAAAAAIAAUAAAAAAAAAAAAIAAYAAAAAAAAAAAAIAAcAAAAAAAAAAAAIAAgAAQAAAAAAAAAIAAkAAAAAAAAAAAAJAAIAAAAAAAAAAAAJAAMAAAAAAAAAAAAJAAQAAAAAAAAAAAAJAAUAAAAAAAAAAAAJAAYAAAAAAAAAAAAJAAcAAAAAAAAAAAAJAAgAAAAAAAAAAAAJAAkAAAAAAAAAAAAKAAIAAAAAAAAAAAAKAAMAAAAAAAAAAAAKAAQAAAAAAAAAAAAKAAUAAAAAAAAAAAAKAAYAAAAAAAAAAAAKAAcAAAAAAAAAAAAKAAgAAgAAAAAAAAAKAAkAAAAAAAAAAAALAAIAAAAAAAAAAAALAAMAAAAAAAAAAAALAAQAAAAAAAAAAAALAAUAAAAAAAAAAAALAAYAAAAAAAAAAAALAAcAAgAAAAAAAAALAAgAAAAAAAAAAAALAAkAAAAAAAAAAAAMAAIAAAAAAAAAAAAMAAMAAAAAAAAAAAAMAAQAAAAAAAAAAAAMAAUAAAAAAAAAAAAMAAYAAAAAAAAAAAAMAAcAAAAAAAAAAAAMAAgAAQAAAAAAAAAMAAkAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_36trf")
+
+[node name="walls" type="TileMapLayer" parent="."]
+z_index = 1
+tile_map_data = PackedByteArray("AAABAP//AwABAAEAADABAAAAAgABAAIAAEABAAEAAgABAAIAAEABAAIAAwABAAIAAGABAAMAAgABAAIAAEABAAQAAgABAAIAAEABAAUAAwABAAIAAEABAAYAAgABAAIAAEABAAcAAgABAAIAAEABAAgAAwABAAIAAGABAAkAAwABAAIAAEABAAoAAgABAAEAABACAP//AgABAAIAAAACAAAAAgABAAAAAAACAAEAAwAAAAEAAAACAAoAAwABAAIAACADAP//AgABAAIAAAADAAAAAgABAAAAAAADAAEAAgAAAAEAAAADAAoAAwABAAIAACAEAP//AwABAAIAAAAEAAAAAgABAAAAAAAEAAEAAwAAAAEAAAAEAAoAAgABAAIAACAFAP//AgABAAIAAAAFAAAAAgABAAAAAAAFAAEAAwAAAAEAAAAFAAoAAgABAAIAACAGAP//AgABAAIAAAAGAAAAAwABAAAAAAAGAAEAAgAAAAEAAAAGAAoAAgABAAIAACAHAP//AgABAAIAAAAHAAAAAgABAAAAAAAHAAEAAgAAAAEAAAAHAAoAAgABAAIAACAIAP//AgABAAIAAAAIAAAAAgABAAAAAAAIAAEAAwAAAAEAAAAIAAoAAgABAAIAACAJAP//AgABAAIAAAAJAAAAAwABAAAAAAAJAAEAAgAAAAEAAAAJAAoAAgABAAIAACAKAP//AwABAAIAABAKAAAAAwABAAAAAAAKAAEAAgAAAAEAAAAKAAoAAwABAAIAACALAP//AwABAAIAABALAAAAAgABAAAAAAALAAEAAgAAAAEAAAALAAoAAwABAAIAACAMAP//AgABAAIAAAAMAAAAAgABAAAAAAAMAAEAAgAAAAEAAAAMAAoAAgABAAIAACANAP//AgABAAEAACANAAAAAwABAAIAAFANAAEAAgABAAIAAFANAAIAAwABAAIAAFANAAMAAgABAAIAAFANAAQAAgABAAIAAFANAAUAAgABAAIAAFANAAYAAwABAAIAAFANAAcAAgABAAIAAFANAAgAAgABAAIAAFANAAkAAgABAAIAAFANAAoAAwABAAEAAAA=")
+tile_set = SubResource("TileSet_tk5fv")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -5
+offset_left = -235.0
+offset_top = -187.0
+offset_right = -195.0
+offset_bottom = -147.0
+scale = Vector2(24.68, 20.08)
+color = Color(0, 0, 0, 1)
+
+[node name="deco" type="TileMapLayer" parent="."]
+z_index = 1
+tile_map_data = PackedByteArray("AAADAAMAAwAAAAAAAAAFAAEABwAAAAAAAAAGAAgACAAAAAAAAAALAAUABgAAAAAAAAAMAAUABQAAAAAAAAA=")
+tile_set = SubResource("TileSet_23wr2")
+
+[node name="MC" parent="." instance=ExtResource("15_3j2fx")]
+position = Vector2(100, 200)
+
+[node name="bed" type="Area2D" parent="."]
+position = Vector2(112, 124)
+scale = Vector2(3.68, 3.92)
+script = ExtResource("18_katsu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bed"]
+position = Vector2(-0.543478, 3.82653)
+scale = Vector2(1.22826, 1.12245)
+shape = SubResource("CircleShape2D_vfrn5")
+
+[node name="interact" type="Label" parent="bed"]
+visible = false
+z_index = 5
+offset_left = -11.9565
+offset_top = 8.92857
+offset_right = 28.0435
+offset_bottom = 32.9286
+scale = Vector2(0.195652, 0.24218)
+theme_override_fonts/font = ExtResource("15_vfrn5")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/normal = SubResource("StyleBoxTexture_jxwrd")
+text = "..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="warn" type="Label" parent="bed"]
+visible = false
+z_index = 5
+offset_left = -14.6739
+offset_top = -14.5408
+offset_right = 25.3261
+offset_bottom = 9.45912
+scale = Vector2(0.195652, 0.19116)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("15_vfrn5")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/normal = ExtResource("18_2ulci")
+text = "..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="door" type="Area2D" parent="."]
+position = Vector2(304, 40)
+script = ExtResource("14_23wr2")
+
+[node name="Sprite2D" type="Sprite2D" parent="door"]
+z_index = 1
+texture = ExtResource("13_w68ji")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="door"]
+z_index = 1
+position = Vector2(0, 15)
+scale = Vector2(1.59999, 3.04)
+shape = SubResource("RectangleShape2D_w68ji")
+
+[node name="interact" type="Label" parent="door"]
+visible = false
+z_index = 5
+offset_left = 17.0
+offset_top = -35.0
+offset_right = 57.0
+offset_bottom = -11.0
+scale = Vector2(1, 1.32357)
+theme_override_fonts/font = ExtResource("15_vfrn5")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/normal = SubResource("StyleBoxTexture_jxwrd")
+text = "..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DoorSfx" type="AudioStreamPlayer" parent="door"]
+stream = ExtResource("21_a5qmg")
+
+[node name="DoorLocked" type="AudioStreamPlayer" parent="door"]
+stream = ExtResource("22_0tws2")
+
+[node name="clock" type="Area2D" parent="."]
+script = ExtResource("21_yggoe")
+
+[node name="Label" type="Label" parent="clock"]
+visible = false
+z_index = 2
+offset_left = 90.0
+offset_top = -11.0
+offset_right = 130.0
+offset_bottom = 13.0
+scale = Vector2(1, 1.32357)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("15_vfrn5")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/normal = ExtResource("18_2ulci")
+text = "..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="clock"]
+z_index = 2
+position = Vector2(177, 75)
+scale = Vector2(3.04, 3.04)
+shape = SubResource("CircleShape2D_spkk5")
+
+[node name="interact" type="Label" parent="clock"]
+visible = false
+z_index = 5
+offset_left = 192.0
+offset_top = 61.0
+offset_right = 232.0
+offset_bottom = 85.0
+scale = Vector2(1, 1.32357)
+theme_override_fonts/font = ExtResource("15_vfrn5")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/normal = SubResource("StyleBoxTexture_jxwrd")
+text = "..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ClockSfx" type="AudioStreamPlayer" parent="clock"]
+stream = ExtResource("22_kk8bn")
+
+[node name="radio" type="Area2D" parent="."]
+script = ExtResource("22_2ulci")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="radio"]
+z_index = 1
+position = Vector2(210, 278)
+scale = Vector2(2.56, 2.48)
+shape = SubResource("CircleShape2D_yggoe")
+
+[node name="interact" type="Label" parent="radio"]
+visible = false
+z_index = 5
+offset_left = 249.0
+offset_top = 261.0
+offset_right = 289.0
+offset_bottom = 285.0
+scale = Vector2(1, 1.32357)
+theme_override_fonts/font = ExtResource("15_vfrn5")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/normal = SubResource("StyleBoxTexture_jxwrd")
+text = "..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="radio"]
+
+[node name="TunningSfx" type="AudioStreamPlayer" parent="radio"]
+stream = ExtResource("24_mc3m6")

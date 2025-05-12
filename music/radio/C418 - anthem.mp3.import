@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://stt4gdp1fxnd"
+path="res://.godot/imported/C418 - anthem.mp3-398df99f2ff12fd82c9950d63082be66.mp3str"
+
+[deps]
+
+source_file="res://music/radio/C418 - anthem.mp3"
+dest_files=["res://.godot/imported/C418 - anthem.mp3-398df99f2ff12fd82c9950d63082be66.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

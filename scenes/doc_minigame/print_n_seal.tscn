@@ -1,0 +1,117 @@
+[gd_scene load_steps=12 format=3 uid="uid://h5wud4tnduys"]
+
+[ext_resource type="Script" uid="uid://lq4qc17agwsu" path="res://scripts/minigames/print_n_seal/print_n_seal.gd" id="1_td14w"]
+[ext_resource type="Texture2D" uid="uid://dtuhbux34n38e" path="res://sprites/minigames/print_n_seal/desk.png" id="2_cgxk1"]
+[ext_resource type="AudioStream" uid="uid://cyv01xs136hwp" path="res://sfx/minigames/print_n_seal/fail.mp3" id="2_snde5"]
+[ext_resource type="AudioStream" uid="uid://djpsrchyd1cjv" path="res://sfx/minigames/print_n_seal/stamp_sfx.mp3" id="3_1cmji"]
+[ext_resource type="FontFile" uid="uid://km1mu0sh3y3k" path="res://fonts/dogicapixelbold.ttf" id="3_i1flq"]
+[ext_resource type="FontFile" uid="uid://gv3nscgxooho" path="res://fonts/dogicapixel.ttf" id="4_25om6"]
+[ext_resource type="Script" uid="uid://clymqcdohqss8" path="res://scripts/minigames/print_n_seal/print_mg_score.gd" id="5_cgxk1"]
+[ext_resource type="Script" uid="uid://dvwus3hqyqn7s" path="res://scripts/minigames/print_n_seal/pns_instructions.gd" id="8_1cmji"]
+[ext_resource type="Texture2D" uid="uid://cvouitfls5dwb" path="res://sprites/minigames/print_n_seal/left_click.png" id="10_amg5k"]
+[ext_resource type="AudioStream" uid="uid://bini8fv46hj6w" path="res://sfx/minigames/print_n_seal/Quiet Office Ambience Sound FX.mp3" id="11_amg5k"]
+[ext_resource type="Texture2D" uid="uid://52vk7nm4tgp7" path="res://sprites/minigames/print_n_seal/right_click.png" id="11_qcpoo"]
+
+[node name="print_n_seal" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_td14w")
+
+[node name="Fail" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_snde5")
+
+[node name="StampSfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_1cmji")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(364, 239)
+rotation = -1.57083
+scale = Vector2(14.44, 11.4)
+texture = ExtResource("2_cgxk1")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 92.0
+offset_top = 50.0
+offset_right = 240.0
+offset_bottom = 73.0
+theme_override_fonts/font = ExtResource("3_i1flq")
+text = "Remaining:"
+script = ExtResource("5_cgxk1")
+
+[node name="Label" type="Label" parent="Label"]
+layout_mode = 0
+offset_left = 155.0
+offset_right = 195.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("4_25om6")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -2
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(18.16, 12.16)
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="instructions" type="ColorRect" parent="."]
+z_index = 10
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(18.2161, 12.092)
+color = Color(0, 0, 0, 1)
+script = ExtResource("8_1cmji")
+
+[node name="Label" type="Label" parent="instructions"]
+layout_mode = 0
+offset_left = 8.72854
+offset_top = 2.39828
+offset_right = 162.729
+offset_bottom = 25.3983
+scale = Vector2(0.145808, 0.414488)
+theme_override_fonts/font = ExtResource("4_25om6")
+theme_override_font_sizes/font_size = 16
+text = "Instructions"
+
+[node name="counter" type="Label" parent="instructions"]
+layout_mode = 0
+offset_left = 17.5669
+offset_top = 29.3583
+offset_right = 57.5669
+offset_bottom = 52.3583
+scale = Vector2(0.121699, 0.343815)
+theme_override_fonts/font = ExtResource("4_25om6")
+text = "3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="left_click" type="Sprite2D" parent="instructions"]
+position = Vector2(14.9064, 20.0011)
+scale = Vector2(0.156769, 0.309618)
+texture = ExtResource("10_amg5k")
+
+[node name="right_click" type="Sprite2D" parent="instructions"]
+position = Vector2(25.1172, 20.0011)
+scale = Vector2(0.156769, 0.309618)
+texture = ExtResource("11_qcpoo")
+
+[node name="stressful_messages" type="Label" parent="."]
+z_index = 5
+layout_mode = 0
+offset_left = 113.0
+offset_top = 416.0
+offset_right = 419.0
+offset_bottom = 439.0
+theme_override_fonts/font = ExtResource("4_25om6")
+horizontal_alignment = 1
+
+[node name="OfficeAmbiance" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_amg5k")
+parameters/looping = true
